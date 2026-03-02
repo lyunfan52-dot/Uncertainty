@@ -1,0 +1,153 @@
+\documentclass[10pt,aspectratio=169,professionalfonts]{beamer}
+
+% ===== 编译建议 =====
+% 推荐使用 XeLaTeX 编译
+
+% ===== 主题与颜色 =====
+\usetheme{Madrid}
+\usecolortheme{default}
+
+% ===== 中文支持 =====
+\usepackage[UTF8]{ctex}
+
+% ===== 常用数学与图形 =====
+\usepackage{amsmath,amssymb,bm}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{ragged2e}
+
+% ===== 页面信息（按需修改） =====
+\title{ME-gPC and WENO}
+\author{Li Yunfan}
+\institute{Zhejiang University}
+\date{2026.3.11}
+
+% ===== 每节开头自动目录 =====
+\AtBeginSection[]
+{
+	\begin{frame}{Contents}
+		\tableofcontents[currentsection]
+	\end{frame}
+}
+
+\begin{document}
+
+% ===== 封面 =====
+\begin{frame}
+	\titlepage
+\end{frame}
+
+% ===== 总目录 =====
+\begin{frame}{Contents}
+	\tableofcontents
+\end{frame}
+
+% ==========================
+\section{Multi-element Generalized Polynomial Chaos}
+
+\begin{frame}{Introduction}
+    \justifying
+	Multi-element Generalized Polynomial Chaos is a method for 
+    uncertainty quantification that divides the input space into 
+    multiple elements and applies polynomial chaos expansions within 
+    each element. This approach allows for better handling of non-smooth 
+    functions and localized features in the solution space.
+    The key idea is to partition the random input space 
+    into smaller subdomains.
+\end{frame}
+
+\begin{frame}{Decomposition of Random Space}
+    \justifying
+	To describe a problem involving uncertainty, 
+    we first need to specify the 
+    underlying probability space \((\Omega,\mathcal{F},P)\).
+    However, the probability space is often absatract and 
+    not directly usable for numerical methods, 
+	which causes difficulties in the decomposition.\cite{WAN2005617}\cite{Wan2006}\cite{FOO20089572}
+    
+    
+\end{frame}
+
+% ==========================
+\section{方法介绍}
+
+\begin{frame}{核心思路}
+	\begin{enumerate}
+		\item 输入与建模假设
+		\item 算法流程与关键步骤
+		\item 复杂度或理论性质
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{关键公式}
+	示例公式：
+	\[
+		\hat{\theta} = \arg\min_{\theta} \; \mathcal{L}(\theta)
+	\]
+
+	\vspace{0.6em}
+	其中 \(\mathcal{L}(\theta)\) 表示目标函数。
+\end{frame}
+
+\begin{frame}{图表示例}
+	\begin{figure}
+		\centering
+		% 将 example-image 替换为你的图片路径
+		\includegraphics[width=0.72\linewidth]{example-image}
+		\caption{示意图}
+	\end{figure}
+\end{frame}
+
+% ==========================
+\section{实验结果}
+
+\begin{frame}{实验设置}
+	\begin{itemize}
+		\item 数据集：XXX
+		\item 评价指标：XXX
+		\item 对比方法：XXX
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{结果对比}
+	\begin{table}
+		\centering
+		\begin{tabular}{lccc}
+			\toprule
+			方法 & 指标1 & 指标2 & 指标3 \\
+			\midrule
+			Baseline A & 0.81 & 0.75 & 0.68 \\
+			Baseline B & 0.84 & 0.77 & 0.71 \\
+			Ours & \textbf{0.89} & \textbf{0.82} & \textbf{0.76} \\
+			\bottomrule
+		\end{tabular}
+		\caption{实验结果示例}
+	\end{table}
+\end{frame}
+
+% ==========================
+\section{总结与展望}
+
+\begin{frame}{总结}
+	\begin{itemize}
+		\item 工作内容与主要结论
+		\item 方法优势与适用范围
+		\item 局限性与未来工作方向
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{致谢}
+	\centering
+	\Large 谢谢！\\
+	\vspace{0.8em}
+	\normalsize 欢迎提问。
+\end{frame}
+
+% ===== 参考文献 =====
+\begin{frame}[allowframebreaks]{References}
+	\bibliographystyle{plain}
+	\bibliography{refs}
+\end{frame}
+
+\end{document}
